@@ -1,0 +1,220 @@
+.post-main-container {
+    padding: 68px 48px;
+    border-radius: 6px;
+    background: $color-dark;
+}
+
+.entry-header {
+    margin: 0 0 1.5rem;
+    padding: 0;
+    display: block;
+
+    .entry-category {
+        margin-bottom: 15px;
+
+        a {
+            background: $color-primary;
+            border: 1px solid $color-primary;
+            padding: 6px 10px;
+            border-radius: 2px;
+            margin: 1px;
+            color: $color-light;
+            transition: .22s easy all;
+
+            &:hover {
+                background: transparent;
+                border-color: $color-primary;
+            }
+        }
+    }
+
+    .entry-title {
+        word-break: break-word;
+
+        a {
+            word-break: break-word;
+            text-decoration: none;
+            font-size: inherit;
+        }
+    }
+}
+
+.comments-area {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    .comments-area-wrapper {
+        border: none;
+        margin: 0.9375rem 0 0;
+        padding: 2rem;
+
+        .thread-alt {
+            ul, ol {
+                list-style: none;
+            }
+        }
+
+        .comment-body {
+            margin-top: 1.875rem!important;
+            padding-top: 1.875rem!important;
+            position: relative!important;
+
+            img {
+                top: 33px!important;
+            }
+        }
+
+        .comment-content {
+            margin: 0!important;
+
+            p {
+                margin-bottom: 2rem;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                margin-bottom: 2rem;
+            }
+
+            ul, ol {
+                padding: 0 0 2rem 2.25rem;
+            }
+
+            ul ul,
+            ol ol {
+                padding: 0;
+            }
+
+            li > ul, li > ol {
+                margin-left: 1.625rem;
+
+                @include xl {
+                    margin-left: 1.125rem;
+                }
+            }
+
+            ul:last-child, ol:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .comment-respond {
+        border: none;
+        margin: 1rem 0 0;
+        position: relative;
+
+        .comment-reply-title {
+            margin: 0 0 0.9375rem;
+        }
+
+        .comment-notes {
+            border: none;
+            position: relative;
+        }
+
+        p {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            textarea, input {
+                width: 100%;
+            }
+
+            label {
+                display: block;
+            }
+        }
+
+        form {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    ul:last-child, ol:last-child {
+        margin-bottom: 0;
+    }
+
+    .comment-list {
+        margin: 2rem 0 0;
+
+        .comment-body {
+            position: relative;
+            border-top: none;
+            margin-top: 0;
+            padding-top: 0;
+            padding-left: 5.1rem;
+
+            .comment-meta {
+                font-size: 0.75rem;
+                margin-bottom: 0.9375rem;
+
+                .comment-author {
+                    .avatar {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 68px;
+                        height: 68px;
+                        border: 1px solid #ebebeb;
+                        display: block;
+                        margin: 0 0 0.9375rem;
+                        padding: 0.125rem;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+
+                .comment-metadata {
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .comment-content {
+                margin-bottom: 0.9375rem;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .reply {
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .pingback {
+            .comment-body {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .comment-form-cookies-consent {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        input {
+            width: auto!important;
+        }
+
+        label {
+            padding-left: 15px;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+[hidden], template {
+    display: none;
+}
+
+a img {
+    border: 0;
+}
+
+img {
+    border: 0;
+}
+
+html {
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1180px;
+    padding: 130px 15px 130px 15px;
+
+    @include lg {
+        max-width: 960px;
+        padding: 80px 15px 80px 15px;
+    }
+
+    @include md {
+        max-width: 720px;
+        padding: 50px 15px 50px 15px;
+    }
+
+    @include sm {
+        max-width: 540px;
+    }
+
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.site-primary-menu-responsive {
+    display: none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    display: inline-block;
+    background: $color-primary;
+    padding: 6px 12px;
+    border: 1px solid $color-primary;
+    border-radius: 3px;
+    color: $color-light;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    line-height: inherit;
+    margin: 0;
+    max-width: 100%;
+    color: $color-light;
+    font-family: $font_primary;
+}
+
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
+textarea {
+    padding: 0.5rem 0.625rem;
+    resize: vertical;
+    background-color: transparent;
+    vertical-align: top;
+    width: 98%;
+    transition: all .22s ease-in-out;
+
+    &:focus {
+        border-color: $color-primary;
+    }
+}

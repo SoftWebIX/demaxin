@@ -1,0 +1,26 @@
+$font_primary: 'Lato', sans-serif;
+$font_secondary: 'Lato', sans-serif;
+
+$font-dark: rgb(51, 51, 51);
+$font-dark-grey: rgb(170, 170, 170);
+$font-grey: rgb(190, 190, 190);
+
+$color-primary: rgb(255, 86, 0);
+$color-light: rgb(255, 255, 255);
+$color-grey: rgb(204, 204, 204);
+$color-dark: rgb(41, 41, 41);
+$color-black: rgb(0, 0, 0);
+
+// Screen size variables
+$screen-xs-max: 425px;  // Tiny phones
+$screen-sm-max: 575px;  // Small tablets and large smartphones (landscape view)
+$screen-md-max: 767px;  // Small tablets (portrait view)
+$screen-lg-max: 991px;  // Tablets and small desktops
+$screen-xl-max: 1199px; // Large tablets and desktops
+
+// Mixins
+@mixin xs { @media ( max-width: #{ $screen-xs-max } ) { @content; } } // Tiny devices
+@mixin sm { @media ( max-width: #{ $screen-sm-max } ) { @content; } } // Small devices
+@mixin md { @media ( max-width: #{ $screen-md-max } ) { @content; } } // Medium devices
+@mixin lg { @media ( max-width: #{ $screen-lg-max } ) { @content; } } // Large devices
+@mixin xl { @media ( max-width: #{ $screen-xl-max } ) { @content; } } // Extra large devices

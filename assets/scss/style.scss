@@ -1,0 +1,19 @@
+// Main style.scss
+
+// Base
+@import 'base/variables';
+@import 'base/base';
+@import 'base/clearings';
+//@import 'base/fonts';
+@import 'base/mixins';
+@import 'base/typography';
+
+// Layouts
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/posts';
+
+// Components
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/nav';

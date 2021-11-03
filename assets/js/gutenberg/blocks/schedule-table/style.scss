@@ -1,0 +1,153 @@
+@import '../../../../scss/base/variables';
+
+.demaxin-block-schedule-table {
+    $schedule: &;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.2rem;
+
+        &--current-date {
+            &__month {
+                color: black;
+                margin: 0;
+            }
+        }
+
+        &--nav {
+            margin-left: 15px;
+
+            &-prev {
+                margin-right: 5px;
+            }
+
+            a {
+                background: $color-primary;
+                border-radius: 50px;
+                padding: .3rem;
+                width: 20px;
+                height: 20px;
+                position: relative;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        &--schedule-btn {
+            padding: 1rem 1.2rem;
+            text-transform: uppercase;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            background: $color-dark;
+            margin-left: auto;
+        }
+    }
+
+    &__events {
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+
+        &-heading {
+            &.current-day {
+                background: #c47a00;
+            }
+        }
+
+        thead {
+            width: 100%;
+
+            tr {
+                th {
+                    &:first-child {
+                        background-color: transparent;
+                        border-left-style: none;
+                        width: 80px;
+                    }
+
+                    &:last-child {
+                        border-right-style: none;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+
+                    background-color: #ff9a00;
+                    border: 3px solid #f0f0f0;
+                    border-radius: 10px;
+                    text-align: center;
+                    padding: .4rem .5rem;
+                    hyphens: none;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: bold;
+
+                    .grid {
+                        display: grid;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    &:first-child {
+                        border-left-style: none;
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+
+                    &:last-child {
+                        border-right-style: none;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+
+                    text-align: center;
+                    padding: 1.5rem .1rem;
+                    border-radius: 10px;
+                    border: 3px solid #f0f0f0;
+                }
+
+                #{ $schedule }__events-hours {
+                    background: $color-dark;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                #{ $schedule }__events-book {
+                    &.no-activities {
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+
+                    &.activities {
+                        vertical-align: middle;
+                        background: $color-primary;
+                        color: white;
+                    }
+
+                    &-info {
+                        display: block;
+                        margin-bottom: 1rem;
+                    }
+
+                    &-fullname {
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

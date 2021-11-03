@@ -1,0 +1,59 @@
+.site-header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+
+    @include lg {
+        padding: 2.5rem 0;
+    }
+
+    @include md {
+        padding: 2rem 0;
+    }
+
+    .site-branding {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-navigation {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+
+        .menu-toggle {
+            display: none;
+
+            @include md {
+                display: block;
+            }
+        }
+
+        .menu {
+            display: flex;
+            width: 100%;
+
+            li {
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &.current_page_item {
+                    a {
+                        color: $color-primary;
+                    }
+                }
+
+                padding-left: 20px;
+            }
+
+            @include md {
+                display: none;
+            }
+        }
+    }
+}
