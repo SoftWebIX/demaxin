@@ -1,0 +1,5 @@
+/node_modules/
+/dist/
+
+# But not these files...
+!.gitignore
